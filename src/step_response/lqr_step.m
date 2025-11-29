@@ -38,24 +38,6 @@ Ess = r_final - y_final;
 fprintf("Final output y_final = %.6f m/s\n", y_final);
 fprintf("Steady-state error Ess = %.10f m/s\n", Ess);
 
-% % simulation duration
-% t = 0:0.01:60;
-% 
-% % reference profile
-% r = zeros(size(t));
-% 
-% % 0–20 sec: 16.67 m/s (60 km/h)
-% r(t >= 0 & t < 20) = 16.67;
-% 
-% % 20–40 sec: 25 m/s (90 km/h)
-% r(t >= 20 & t < 40) = 25.0;
-% 
-% % 40–60 sec: back to 16.67 m/s
-% r(t >= 40) = 16.67;
-% 
-% % Simulate closed-loop system
-% y = lsim(sys_cl, r, t);
-
 % plot
 figure;
 plot(t, y, 'LineWidth', 2);
@@ -68,8 +50,3 @@ ylim([0 30]);
 % time response specs
 disp("LQR Step Response Metrics:");
 stepinfo(y,t)
-
-% % specs on the 1st segment only (0 to 60)
-% idx = t <= 20;     
-% disp("Step info for first segment (first 20 sec):")
-% stepinfo(y(idx), t(idx))
