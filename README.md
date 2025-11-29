@@ -28,12 +28,11 @@ cruise-control-lqr-pid/
 │  │  └─ lqr_step_design.slx
 │  │
 │  ├─ acc_dec/
-│  │  ├─ pid_accdec.m
-│  │  ├─ lqr_accdec.m
-│  │  └─ accdec_compare_all.m
-│  │
-│  └─ utils/
-│     └─ plot_styles.m
+│     ├─ pid_accdec.m
+│     ├─ lqr_accdec.m
+│     ├─ pid_accdec_design.slx
+│     ├─ lqr_accdec_design.slx
+│     └─ accdec_compare_all.m
 │
 └─ figures/
    ├─ step/
