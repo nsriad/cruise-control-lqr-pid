@@ -1,0 +1,15 @@
+# macOS junk
+.DS_Store
+
+# MATLAB autosave / backup
+*.asv
+
+# Simulink cache & generated code
+slprj/
+sccprj/
+*.slxc
+*.mex*
+
+# Auto-generated figures or temp files (if any)
+*.fig
+
